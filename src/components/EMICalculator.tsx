@@ -88,20 +88,35 @@ const EMICalculator = () => {
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-            <div className="bg-muted rounded-xl p-4">
-              <p className="text-xs text-muted-foreground font-semibold mb-1">Monthly EMI</p>
-              <p className="text-lg font-bold gradient-text">{fmt(emi)}</p>
-            </div>
-            <div className="bg-muted rounded-xl p-4">
-              <p className="text-xs text-muted-foreground font-semibold mb-1">Total Interest</p>
-              <p className="text-lg font-bold text-foreground">{fmt(totalInterest)}</p>
-            </div>
-            <div className="bg-muted rounded-xl p-4">
-              <p className="text-xs text-muted-foreground font-semibold mb-1">Total Payment</p>
-              <p className="text-lg font-bold text-foreground">{fmt(totalPayment)}</p>
-            </div>
-          </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+  <div className="bg-muted rounded-xl p-4">
+    <p className="text-xs text-muted-foreground font-semibold mb-1">
+      Monthly EMI
+    </p>
+    <p className="text-lg font-bold gradient-text break-words">
+      {fmt(emi)}
+    </p>
+  </div>
+
+  <div className="bg-muted rounded-xl p-4">
+    <p className="text-xs text-muted-foreground font-semibold mb-1">
+      Total Interest
+    </p>
+    <p className="text-lg font-bold text-foreground break-words">
+      {fmt(totalInterest)}
+    </p>
+  </div>
+
+  <div className="bg-muted rounded-xl p-4">
+    <p className="text-xs text-muted-foreground font-semibold mb-1">
+      Total Payment
+    </p>
+    <p className="text-lg font-bold text-foreground break-words">
+      {fmt(totalPayment)}
+    </p>
+  </div>
+</div>
+
         </motion.div>
       </div>
     </section>

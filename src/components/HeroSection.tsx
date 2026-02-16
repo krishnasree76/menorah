@@ -5,20 +5,26 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       {/* Video Section */}
-      <div className="relative w-full h-[50vh] md:h-[60vh]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-secondary/30" />
-        {/* Bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </div>
+      {/* Video Section */}
+<div className="relative w-full flex justify-center bg-background pt-12">
+  <div className="relative w-[95%] md:w-[85%] lg:w-[75%] aspect-video rounded-3xl overflow-hidden shadow-2xl border border-border">
+    
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-cover"
+    >
+      <source src="/hero-video.mp4" type="video/mp4" />
+    </video>
+
+    {/* Soft overlay */}
+    <div className="absolute inset-0 bg-black/20" />
+
+  </div>
+</div>
+
 
       {/* Content Below Video */}
       <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16 max-w-6xl mx-auto px-4 py-16 md:py-20 bg-background">
